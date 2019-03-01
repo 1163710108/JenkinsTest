@@ -1,7 +1,7 @@
 package com.jenkins.apple;
 
 public class Apple {
-    private String apple = "this is apple1";
+    private String apple = "first test";
 
     public String getApple() {
         return apple;
