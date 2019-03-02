@@ -1,9 +1,6 @@
 FROM tomcat
 MAINTAINER liulei
-
-ENV CATALINA_BASE:   /usr/local/tomcat \
-    CATALINA_HOME:   /usr/local/tomcat \
-    CATALINA_TMPDIR: /usr/local/tomcat/temp \
-    JRE_HOME:        /usr
-
-COPY target/Test.war ${CATALINA_HOME}/webapps/
+# 将war包 打包到 tomcat/webapps之下
+# COPY target/Test.war webapps/
+ENTRYPOINT ["bin/catalina.sh", "run"]
+EXPOSE 8080
